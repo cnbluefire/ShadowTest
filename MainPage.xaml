@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="ShadowTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ShadowTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    RequestedTheme="Light"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Resources>
+            <SolidColorBrush x:Key="ButtonBackground" Color="#2d78d6" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3091e2" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1f5aa2" />
+
+            <SolidColorBrush x:Key="ButtonForeground" Color="White" />
+            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White" />
+            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White" />
+        </Grid.Resources>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <Button CornerRadius="4"
+                    BorderThickness="0"
+                    Height="150" 
+                    FontSize="32"
+                    Content="Add Button" 
+                    local:ShadowHelper.IsEnabled="True" 
+                    Click="TestButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
